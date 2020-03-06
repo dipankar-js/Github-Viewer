@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useContext } from "react";
-import { Bar, Line, Pie, HorizontalBar, Polar } from "react-chartjs-2";
+import { Pie } from "react-chartjs-2";
 import "../../App.css";
 import GitContext from "../../context/gitContext";
 
@@ -26,7 +26,6 @@ export default function Language() {
     const colorarray = [];
     // User stats
     stats.userStats(function(err, stats) {
-      console.log(stats);
       if (stats) {
         stats.map(stat => {
           labelarray.push(stat.label);
@@ -41,8 +40,6 @@ export default function Language() {
         color: colorarray
       });
     });
-
-    console.log(state);
   }, [github]);
 
   const chartData = {

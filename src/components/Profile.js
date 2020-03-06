@@ -41,7 +41,7 @@ export default function Profile(props) {
           <div className="profiledata">
             <p>
               <i
-                class="fa fa-suitcase"
+                className="fa fa-suitcase"
                 style={{ fontSize: "15px", marginRight: "8px" }}
               ></i>{" "}
               {github.company}
@@ -72,8 +72,8 @@ export default function Profile(props) {
       <div style={{ display: "flex" }}>
         <Language />
         <Language />
-        <RepoList />
       </div>
+      <RepoList />
     </div>
   );
 }
